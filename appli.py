@@ -192,7 +192,7 @@ if selected == "Coureurs":
         liste_index ={1:'< 400',2:'400-425',3:'425-450',4:'450-475',5:'475-500',6:'500-525',7:'525-550',8:'550-575',9:'575-600',10:'600-625',11:'625-650',12:'650-675',13:'675-700',14:'700-725',15:'725-750',16:'750-775',17:'775-800',18:'800-825',19:'825-850',20:'850-875',21:'875-900',22:'900-925',23:'925-950',24:'> 950'}
         liste_index ={2:'400-425',3:'425-450',4:'450-475',5:'475-500',6:'500-525',7:'525-550',8:'550-575',9:'575-600',10:'600-625',11:'625-650',12:'650-675',13:'675-700',14:'700-725',15:'725-750',16:'750-775',17:'775-800',18:'800-825',19:'825-850',20:'850-875',21:'875-900',22:'900-925',23:'925-950'}
 
-        index = st.selectbox('Choisissez votre catégorie d''index UTMB', liste_index.values(), index=None, placeholder="Sélectionnez votre catégorie d''index UTMB...")
+        index = st.selectbox("Choisissez votre catégorie d'index UTMB", liste_index.values(), index=None, placeholder="Sélectionnez votre catégorie d'index UTMB...")
 
     with col2:
         #sélection de la course
