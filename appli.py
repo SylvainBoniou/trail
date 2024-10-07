@@ -270,7 +270,7 @@ if selected == "Coureurs":
                 "Classement moyen": st.column_config.NumberColumn(
                     format="%d",
                 ),
-                "Classement le + pourri 🚷": st.column_config.NumberColumn(
+                "Classement max 🚷": st.column_config.NumberColumn(
                     format="%d",
                 )
             },
