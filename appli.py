@@ -255,10 +255,10 @@ if selected == "Coureurs":
             'Course': 'UTMB',
             'Meilleur classement 🥇': classement_min,
             'Classement moyen': classement_moyen,
-            'Classement le + pourri 🚷': classement_max,
+            'Classement max 🚷': classement_max,
             'Meilleur temps 🤩': temps_min_hhmmss,
             'Temps moyen': temps_moy_hhmmss,
-            'Temps le + pourri ❤️‍🩹': temps_max_hhmmss
+            'Temps le + long ❤️‍🩹': temps_max_hhmmss
         }
 
         df_final = pd.DataFrame(data, index=[1])
