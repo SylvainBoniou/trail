@@ -199,7 +199,7 @@ if selected == "Coureurs":
         course = st.radio(
             "Choisissez votre course 👇",
             ["UTMB", "Diagonale des fous"],
-            index=1,
+            index=0,
             horizontal  = True
         )
 
@@ -231,6 +231,9 @@ if selected == "Coureurs":
         st.image("https://storage.googleapis.com/utrailbucket/2024/08/Capture-decran-2024-08-31-a-01.51.19-750x536.jpg")
     else:
         #calcul des élements
+        df_coureurs = df_coureurs[(df_coureurs['Temps'] != '-')]
+        df_coureurs = df_coureurs[(df_coureurs['Classement'] != 'DNF')]
+        df_coureurs['Classement'] = df_coureurs['Classement'].astype(int)
         temps_max = pd.to_timedelta(df_coureurs['Temps']).max()
         heures_max, remainder_max = divmod(temps_max.total_seconds(), 3600)
         minutes_max, secondes_max = divmod(remainder_max, 60)
@@ -248,7 +251,7 @@ if selected == "Coureurs":
 
         classement_max = df_coureurs['Classement'].max()
         classement_min = df_coureurs['Classement'].min()
-        classement_moyen = round((df_coureurs['Classement'].mean()))
+        classement_moyen = round(df_coureurs['Classement'].mean())
 
         #création du tableau
         data = {
