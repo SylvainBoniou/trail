@@ -255,7 +255,7 @@ if selected == "Coureurs":
 
         #création du tableau
         data = {
-            'Course': 'UTMB',
+            'Course': course,
             'Meilleur classement 🥇': classement_min,
             'Classement moyen': classement_moyen,
             'Classement max 🚷': classement_max,
@@ -289,7 +289,7 @@ if selected == "Coureurs":
         </style>
         """, unsafe_allow_html=True)
 
-        st.markdown("<p class=\"big-font\">*Résultats basés sur les 9 dernières années pour l'UTMB (pour les 100 premiers) et les 6 dernières années pour la diagonale des fous.</p>", unsafe_allow_html=True)
+        st.markdown("<p class=\"big-font\">*Résultats basés sur les 9 dernières années pour l'UTMB et les 6 dernières années pour la diagonale des fous.</p>", unsafe_allow_html=True)
 
         # scatter des temps selon l'index UTMB
         fig = px.scatter(df_coureurs, x="Index", y="Temps",
